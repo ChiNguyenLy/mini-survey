@@ -129,7 +129,7 @@ function finishSurvey() {
 
     setTimeout(() => {
 
-        window.location.href = "Homepage.html";
+        window.location.href = "index.html";
 
     }, 500);
 
