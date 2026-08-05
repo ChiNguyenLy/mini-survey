@@ -1,0 +1,284 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:"Poppins",sans-serif;
+    background:linear-gradient(135deg,#FFF7FA,#FFEFF5);
+    overflow:hidden;
+    opacity:1;
+    transition:opacity .5s;
+}
+
+body.fade-out{
+    opacity:0;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card{
+    width:90%;
+    max-width:500px;
+    background:#fff;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    animation:appear .6s ease;
+}
+
+
+/* =========================
+   QUESTION
+========================= */
+
+.progress-text{
+    text-align:center;
+    font-size:16px;
+    font-weight:600;
+    color:#999;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin-bottom:30px;
+}
+
+.question-title{
+    font-size:18px;
+    color:#777;
+}
+
+.question{
+    font-size:28px;
+    font-weight:600;
+    text-align:center;
+    margin:40px 0;
+    opacity:0;
+    transform:translateY(20px);
+    transition:.4s;
+}
+
+.question.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button{
+    width:100%;
+    height:55px;
+    border:none;
+    border-radius:50px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.yes-btn{
+    background:#FF5F96;
+    color:#fff;
+    margin-bottom:15px;
+}
+
+.no-btn{
+    background:#FFE4EE;
+    color:#FF5F96;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 20px rgba(255,95,150,.25);
+}
+
+button:active{
+    transform:scale(.97);
+}
+
+
+/* =========================
+   FINISH SCREEN
+========================= */
+
+.finish-screen{
+    text-align:center;
+    animation:appear .6s ease;
+}
+
+.heart{
+    font-size:70px;
+    margin-bottom:20px;
+    animation:heartBeat 1.2s infinite;
+}
+
+.finish-screen h2{
+    color:#d63384;
+    margin-bottom:15px;
+}
+
+.finish-screen p{
+    color:#666;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+.finish-btn{
+    width:180px;
+    background:#FF5F96;
+    color:white;
+}
+
+
+/* =========================
+   BACKGROUND EFFECT
+========================= */
+
+.background{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    overflow:hidden;
+}
+
+.background span{
+    position:absolute;
+    bottom:-120px;
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    background:white;
+    opacity:.4;
+    filter:blur(2px);
+    animation:float 12s linear infinite;
+}
+
+.background span:nth-child(1){
+    left:8%;
+    animation-delay:0s;
+}
+
+.background span:nth-child(2){
+    left:20%;
+    animation-delay:2s;
+}
+
+.background span:nth-child(3){
+    left:35%;
+    animation-delay:4s;
+}
+
+.background span:nth-child(4){
+    left:55%;
+    animation-delay:6s;
+}
+
+.background span:nth-child(5){
+    left:70%;
+    animation-delay:1s;
+}
+
+.background span:nth-child(6){
+    left:85%;
+    animation-delay:3s;
+}
+
+.background span:nth-child(7){
+    left:95%;
+    animation-delay:5s;
+}
+
+
+/* =========================
+   KEYFRAMES
+========================= */
+
+@keyframes appear{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0) scale(.5);
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:.5;
+
+    }
+
+    100%{
+
+        transform:translateY(-120vh) scale(1.6);
+        opacity:0;
+
+    }
+
+}
+
+@keyframes heartBeat{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.2);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
