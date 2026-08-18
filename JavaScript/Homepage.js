@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.add("fade-out");
         // Chờ animation chạy xong
         setTimeout(() => {
-            window.location.href = "Question.html";
+            window.location.href = "../HTML/Question.html";
         }, 500);
     });
 });
